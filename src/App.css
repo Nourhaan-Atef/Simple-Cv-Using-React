@@ -1,38 +1,267 @@
-.App {
-  text-align: center;
+:root{
+--main-color:teal;
+--font-color:#52575e;
+--font-family:cursive
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* App Component Style */
+.App .content{
+display: flex;
+justify-content: flex-start;
+align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .content .right{
   display: flex;
-  flex-direction: column;
+flex-direction: column;
+align-items: flex-start;
+}
+/* Skills And Languages Component Style */
+.card{
+  background-color: #fff;
+  box-shadow: 0 5px 10px lightgray;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 100px 0px;
+  margin: 30px;
+}
+.card .photo img{
+  max-width: 300px;
+}
+.card .header{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 10px;
+}
+
+.card h3.name{
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 25px;
+  color: var(--main-color);
+  font-weight: bold;
+  box-shadow: 0 5px 10px lightgray;
+  border-radius: 10px;
+  border: 3px dashed var(--main-color); 
+  padding: 5px;
+  
+}
+
+.card .contacts .contact-details,
+.card .skills header,
+.card .langs header
+{
+  display: flex;
   align-items: center;
+  justify-content: flex-start;
+  margin: 5px;
+}
+
+.card .contacts .contact-details p,
+.card .skills header h3,
+.card .langs header h3
+{
+  margin: 0;
+  margin-left: 10px;
+  color: var(--font-color);
+  font-family: var(--font-family);
+}
+
+.icon{
+  color: var(--main-color);
+  font-size: 20px;
+}
+
+.card .skills header .icon,
+.card .langs header .icon{
+  margin-top: 20px;
+  font-size: 30px;
+}
+.card .skills header h3,
+.card .langs header h3{
+  color: #000;
+  margin-top: 20px;
+  font-size: 22px;
+}
+.card .skills .skill-details p,
+.card .langs .lang-details p{
+font-family: var(--font-family);
+margin-bottom: 8px;
+}
+
+
+.card .skills .skill-details div,
+.card .langs .lang-details div{
+  width: 98%;
+  background-color: var(--main-color);
+  height: 20px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+ 
+}
+.card .skills .skill-details div.css{
+  width: 90%;
+}
+.card .skills .skill-details div.js{
+  width: 95%;
+}
+.card .skills .skill-details div.bootstrap{
+  width: 75%;
+}
+.card .skills .skill-details div.react{
+  width: 70%;
+}
+.card .langs .lang-details div.arabic{
+  width: 100%;
+}
+.card .langs .lang-details div.english{
+  width: 70%;
+}
+
+/* Footer Component Style */
+
+footer{
+  background-color: var(--main-color);
+  margin: 0;
+  padding: 50px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-family: var(--font-family);
+}
+footer section .icon{
+  margin: 5px;
+  color: #fff;
+}
+footer p {
+  margin: 0;
+  padding: 5px;
+}
+footer p span{
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+/* Experience And Education Component Style */
+.experience-card ,
+.education-card {
+box-shadow: 0 5px 10px lightgray;
+padding: 30px;
+margin: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.experience-card header,
+.education-card header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
+.experience-card header .icon,
+.education-card header .icon{
+  font-size: 30px;
+}
+.experience-card header h2,
+.education-card header h2{
+  margin: 0;
+  margin-left: 20px;
+  font-family: var(--font-family);
+  color: #000;
+  font-size: 30px;
+
+}
+.experience-card .job h3,
+.education-card .edu h3{
+  font-family: var(--font-family);
+}
+
+.experience-card .job .date,
+.education-card .edu .date{
+  font-family: var(--font-family);
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.experience-card .job .date p,
+.education-card .edu .date p{
+  margin-left: 10px;
+}
+.experience-card .job .date p span{
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 2px;
+  border-radius: 5px;
+}
+.experience-card .job  h3,
+.education-card .edu  h3{
+  margin-bottom: 0; 
+}
+
+.experience-card .job  .desc,
+.education-card .edu  .desc{
+  color: var(--font-color);
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+.separator{
+  width: 100%;
+  height: 1px;
+  margin: 20px 0;
+ background-color: lightgray;
+}
+
+
+/* Media Qeury */
+@media(max-width:1300px){
+  .App .content{
+    display: flex;
+    flex-direction: column;
+  }
+
+/* Card */
+.card{
+  max-width: 600px;
+}
+.card .photo img{
+  max-width: 600px;
+}
+.experience-card ,
+.education-card {
+max-width: 600px;
+box-shadow: 0 5px 10px lightgray;
+border-radius: 100px 0px;
+}
+
+}
+
+@media(max-width:750px){
+
+.card{
+  max-width: 400px;
+}
+.card .photo img{
+  max-width: 400px;
+}
+.experience-card ,
+.education-card {
+max-width: 400px;
+}
+
+}
+@media(max-width:500px){
+
+  .card{
+    max-width: 280px;
+  }
+  .card .photo img{
+    max-width: 280px;
+  }
+  .experience-card ,
+  .education-card {
+  max-width: 280px;
+
+  }
+  
+  }
